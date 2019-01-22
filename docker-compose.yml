@@ -1,0 +1,15 @@
+ionic_container:
+  container_name: ionic-content
+  ports:
+    - "8282:8100"
+  command: | 
+    bash -c "
+    npm install
+    ionic serve --configuration=dev"
+    
+  working_dir: /okrProject
+  volumes:
+    - "./:/okrProject"
+    - "./package.json:/okrProject/package.json"
+
+  image: spefalex/okrnode:1.0.1

@@ -1,0 +1,47 @@
+
+<ion-content padding>
+  <ion-grid text-center>
+    <form [formGroup]="emailForm" (ngSubmit)="confirmEmail()">
+        <ion-row>
+            <ion-col>
+                <img class="login-img" width="400" height="400" src="assets/imgs/login-4.png" alt="">  
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h1>{{ 'REGISTRATION_EMAIL_TITLE' | translate }}</h1>
+                <p>{{ 'REGISTRATION_EMAIL_DESCRIPTION' | translate }}</p>
+            </ion-col>
+        </ion-row>
+        <input type="file" id="avatar" accept="image/*" name="avatar"(change)="onFileChange($event)" #fileInput>
+         <img class="image" src={{images}}/>
+            <ion-col>
+                <ion-input formControlName="email" type="text" placeholder="Saisis ton email" [(ngModel)]="email" (keyup)="validateEmail($event)"required></ion-input>
+            </ion-col>
+            <p> {{textMessageEmail}}</p>
+            <ion-col>
+                <ion-input formControlName="password" type="password" placeholder="nouveu mot de passe"  [(ngModel)]="password" (keyup)="verifiePassword($event)"  required></ion-input>
+            </ion-col>
+            <ion-col>
+                <ion-input formControlName="password1" type="password" placeholder="ressaisir le mot de passe"  [(ngModel)]="password1" (keyup)="verifiePassword($event)" required></ion-input>
+            </ion-col>
+            <p> {{textMessage}}</p>
+ 
+        <ion-row>
+            <ion-col >
+              <ion-button  color="dark" type="submit" [disabled]="emailForm.invalid || !stateNext()" ion-button>{{ 'REGISTRATION_EMAIL_BUTTON' | translate }}</ion-button >
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-grid>
+<ion-button href="tabs/(objectif:objectif)">next finish</ion-button >
+    <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-scale-multiple"
+  >
+    <p style="font-size: 20px; color: white">En cours de connexion...</p>
+  </ngx-spinner>
+
+</ion-content>

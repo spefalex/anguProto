@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar> <ion-title> S'identifier </ion-title> </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-input
+            placeholder="Identification"
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="hideStateMessage()"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            placeholder="Mot de passe"
+            type="password"
+            required
+            [(ngModel)]="password"
+            (ngModelChange)="hideStateMessage()"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div *ngIf="message" class="alert alert-danger">{{ message }}</div>
+      <ion-button ion-button class="submit-btn" full (click)="login()">
+        Login
+      </ion-button>
+    </ion-col>
+
+    <ngx-spinner
+      bdColor="rgba(51,51,51,0.8)"
+      size="medium"
+      color="#fff"
+      type="ball-scale-multiple"
+    >
+      <p style="font-size: 20px; color: white">En cours de connexion...</p>
+    </ngx-spinner>
+    <!--
+      <ion-item  style="width: 100%; text-align: center;" (click)="inscription()" >S'inscrire</ion-item>
+    -->
+    <a style="width: 100%; text-align: center;" href="/register">S'inscrire</a>
+    <a style="width: 100%; text-align: center;" href="">Mot de passe oublié</a>
+
+  </ion-row>
+  <p><a rel="noopener" href="/tabs/(objectif:objectif)">Acceuil</a></p>
+ 
+</ion-content>

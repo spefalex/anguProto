@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>acceuil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>fzgfsg</p>
+  <ion-nav [root]="rootPage" #content swipeBackEnable="false"> </ion-nav>
+</ion-content>
+-->
+<ion-tabs>
+  <ion-tab tab="home" [component]="ObjectifPage"></ion-tab>
+  <ion-tab tab="result" [component]="ResultPage"></ion-tab>
+  <ion-tab tab="offres" [component]="OfferPage"></ion-tab>
+  <ion-tab tab="equipe" [component]="TeamPage"></ion-tab>
+  <ion-tab tab="paiement"[component]="PaiementPage"></ion-tab>
+  <ion-tab tab="menu"[component]="MenuPage"></ion-tab>
+  <ion-tab-bar slot="top">
+
+    <ion-tab-button tab="home">
+      <ion-label>Objectif</ion-label>
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="result">
+      <ion-label>Resultats</ion-label>
+      <ion-icon name="book"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="offres">
+      <ion-label>Offres</ion-label>
+      <ion-icon name="card"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="equipe">
+      <ion-label>Equipe</ion-label>
+      <ion-icon name="logo-steam"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="paiement">
+      <ion-label>Paiement</ion-label>
+      <ion-icon name="logo-usd"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="menu">
+    
+      <ion-icon name="menu"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+  
+</ion-tabs>
+
+

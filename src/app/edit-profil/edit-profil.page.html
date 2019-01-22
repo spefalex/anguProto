@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar> <ion-title>Edit profil</ion-title> </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- 
+  <ion-card>
+    <ion-card-header class="avatar">
+      <ion-avatar >
+        <img width="80" height="100" src="assets/imgs/avatar_default.png" />
+      </ion-avatar>
+   
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+      <ion-item href="#">
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-label>{{infoUser.username}}</ion-label>
+        </ion-item>
+    <ion-item href="#">
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label>{{infoUser.email}}</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="call" slot="start"></ion-icon>
+      <ion-label>{{infoUser.mobileNumber}}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-button color="medium">Modifier</ion-button> -->
+
+  <ion-grid text-center>
+    <form [formGroup]="form" (ngSubmit)="editProfil()">
+      <ion-row>
+        <ion-col> <h1>Modification profil</h1> </ion-col>
+      </ion-row>
+      <input
+        type="file"
+        id="avatar"
+        accept="image/*"
+        name="avatar"
+        (change)="onFileChange($event)"
+        #fileInput
+      />
+      <img class="image" src="{{ images }}" />
+      <ion-col>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-input
+          formControlName="email"
+          type="text"
+          placeholder="email"
+          [(ngModel)]="email"
+          required
+        ></ion-input>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="people" slot="start"></ion-icon>
+        <ion-input
+          formControlName="username"
+          type="text"
+          placeholder="username"
+          [(ngModel)]="username"
+          required
+        ></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-input
+          formControlName="mobileNumber"
+          type="text"
+          placeholder="mobilenumber"
+          [(ngModel)]="mobileNumber"
+          required
+        ></ion-input>
+      </ion-col>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="dark" type="submit" ion-button
+            >Modifier
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

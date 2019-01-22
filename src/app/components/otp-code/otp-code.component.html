@@ -1,0 +1,11 @@
+<ion-row>
+  <ion-col>
+      <h1>CONFIRMATION</h1>
+      <p>Saisis le code que nous t'avons envoyé ci-dessous :</p>
+  </ion-col>
+</ion-row>
+<ion-row [formGroup]="formGroup">
+  <ion-col>
+      <ion-input formControlName="smsCode" type="tel" required></ion-input>
+  </ion-col>
+</ion-row>

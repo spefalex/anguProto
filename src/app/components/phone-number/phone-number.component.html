@@ -1,0 +1,17 @@
+<ion-row>
+  <ion-col>
+      <p>{{label}}</p>
+  </ion-col>
+</ion-row>
+<ion-row [formGroup]="formGroup">
+  <ion-col>
+      <ion-row id="select">
+          <ion-label>Pays</ion-label>
+          <ion-select formControlName="phoneCountry"> 
+              <ion-select-option *ngFor="let option of countryCode" [value]="option?.dial_code">{{option?.name}} {{option?.dial_code}}
+              </ion-select-option>
+          </ion-select>  
+      </ion-row>
+      <ion-input formControlName="phoneNumber" type="tel" placeholder="Entrer votre numéro de mobile"></ion-input>
+  </ion-col>
+</ion-row>

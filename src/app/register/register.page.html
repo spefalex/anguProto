@@ -1,0 +1,9 @@
+<ion-content padding [ngSwitch]="page">
+  <app-phone-number *ngSwitchCase="1" [page]="page" (nextClicked)="nextClickedHandler($event)"></app-phone-number>
+  <app-confirm-phone-number *ngSwitchCase="2" [page]="page" (nextClicked)="nextClickedHandler($event)"></app-confirm-phone-number>
+  <app-pseudo *ngSwitchCase="3" [page]="page" (nextClicked)="nextClickedHandler($event)"></app-pseudo>
+  <app-email *ngSwitchCase="4" [page]="page" (nextClicked)="nextClickedHandler($event)"></app-email>
+</ion-content>
+
+<!-- <app-check-phone-number (nextClicked)="nextClickedHandler($event)"></app-check-phone-number> -->
+

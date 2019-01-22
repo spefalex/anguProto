@@ -1,0 +1,55 @@
+<ion-tabs>
+  <ion-tab-bar slot="top">
+    <ion-tab-button tab="objectif" href="/tabs/(objectif:objectif)">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Objectif</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="result" href="/tabs/(result:result)">
+      <ion-icon name="book"></ion-icon>
+      <ion-label>Resultats</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="offer" href="/tabs/(offer:offer)">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Offres</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="team" href="/tabs/(team:team)">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Team</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="paiement" href="/tabs/(paiement:paiement)">
+      <ion-icon name="logo-usd"></ion-icon>
+      <ion-label>Paiment</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="menu" href="/tabs/(menu:menu)">
+      <ion-icon name="menu"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+  <ion-tab tab="objectif">
+    <ion-router-outlet name="objectif"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="result">
+    <ion-router-outlet name="result"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="offer">
+    <ion-router-outlet name="offer"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="team">
+    <ion-router-outlet name="team"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="paiement">
+    <ion-router-outlet name="paiement"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab tab="menu">
+    <ion-router-outlet name="menu"></ion-router-outlet>
+  </ion-tab>
+</ion-tabs>

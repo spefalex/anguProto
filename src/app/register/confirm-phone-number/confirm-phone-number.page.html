@@ -1,0 +1,33 @@
+
+
+<ion-content padding>
+  <ion-grid text-center>
+    <form [formGroup]="smsCodeForm" (ngSubmit)="confirmPhoneNumber()">
+       <ion-row>
+            <ion-col>
+                <img class="login-img" width="400" height="400" src="assets/imgs/login-2.png" alt="">  
+            </ion-col>
+        </ion-row>
+        <component-otp-code></component-otp-code>
+        <ion-row>
+            <ion-col >
+              <ion-button color="dark" type="submit" [disabled]="smsCodeForm.invalid" ion-button >Continue</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <p>{{ 'REGISTRATION_CONFIRM_SMS_LABEL' | translate}}<br><a color="dark" href="#">{{ 'REGISTRATION_CONFIRM_SMS_LABEL1' | translate }}</a></p>
+            </ion-col>
+        </ion-row>
+    </form>
+  </ion-grid>
+  <ion-button (click)='next()'>next</ion-button>
+  <ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">En cours de connexion...</p>
+</ngx-spinner>
+</ion-content>
